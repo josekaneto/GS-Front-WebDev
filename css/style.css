@@ -2,17 +2,21 @@
     --cor-principal: #0074d9;
     --cor-secundaria: #007943;
     --cor-terciaria: #b09900;
-    --font-titulo: "Mulish", sans-serif;
-    --font-texto: "Tinos", serif;
+    --cor-texto-branco: #ffffff;
+    --cor-texto-preto: #000000;
+    --font-texto: "Mulish", sans-serif;
+    --font-titulo: "Tinos", serif;
+    --padding-principal: 0 100px;
 }
 
 *{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html{
-    font-size: 62.5%; 
+    font-size: 62.5%; /* 1rem = 10px */
     scroll-behavior: smooth;
 
     & body{
@@ -21,46 +25,111 @@ html{
     }
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--font-titulo);
+}
+
 ul{
     list-style: none;
 }
 
-a{
+.botao{
     text-decoration: none;
-    color: var(--cor-secundaria);
-    transition: 0.7s;
-}
-a:hover{
-    color: var(--cor-terciaria);
+    color: var(--cor-texto-branco);
+    padding: 1.5rem 3rem;
+    border-radius: .8rem;
+    font-weight: bold;
 }
 
 .container{
     width: 100%;
-    height: 100vh;
+    min-height: 90vh;
+    padding: var(--padding-principal);
 }
 
 .section-1{
-    background-image: url(../images/enchente.jpg) ;
+    background-image: url(../images/enchente.jpg);
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header{
     width: 100%;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
 
-    & img{
+    & .logo-zaster{
         width: 15rem;
         height: auto;
     }
 
-    & ul{
+    & .lista-menu{
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 3rem;
+
+        & a{
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--cor-texto-preto);
+            transition: .5s;
+        }
+        a:hover{
+            color: var(--cor-terciaria);
+        }
+    
+    }
+}
+
+.conteudo-section-1{
+    width: 70%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+    & h2{
+        font-size: 6rem;
+        text-align: center;
+        color: var(--cor-texto-preto);
+    }
+
+    & p{
+        font-size: 2.4rem;
+        text-align: center;
+        color: var(--cor-texto-preto);
+        line-height: 3rem;
+        font-weight: 400;
+        text-wrap: balance;
+    }
+
+    & .conteudo-section-1-btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        & .saiba-mais{
+            background-color: var(--cor-secundaria);
+            transition: .6s;
+        }
+        & .saiba-mais:hover{
+            background-color: var(--cor-terciaria);
+        }
+
+        & .baixar-app{
+            background-color: var(--cor-principal);
+        }
+
+
     }
 }
