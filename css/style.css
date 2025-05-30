@@ -357,6 +357,7 @@ ul {
         gap: 3rem;
 
         & li {
+            list-style: circle;
             font-size: var(--size-p);
             text-align: left;
             line-height: var(--espaco-texto);
@@ -466,8 +467,6 @@ ul {
         box-shadow: 0 0 30px var(--cor-terciaria);
     }
 }
-
-
 
 /* Responsividade para telas menores */
 @media (max-width: 900px) {
