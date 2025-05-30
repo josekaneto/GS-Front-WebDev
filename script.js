@@ -14,16 +14,16 @@ let labels = [
 
 let alts = [
     'Imagem de casas inundadas',
+    'Imagem da casas sem água',
     'Imagem de um carro inundado',
-    'Imagem de uma placa inundada',
-    'Imagem de uma placa inundada'
+    'Imagem do carro sem água'
 ]
 let time = 3000
 
 function changeImg() {
     document.getElementById("slide").src = image[i]
     document.getElementById("antes-depois-subtitulo").textContent = labels[i]
-    document.getElementById("slide").alt = labels[i]
+    document.getElementById("slide").alt = alts[i]
 
     if (i < image.length - 1) {
         i++
@@ -34,3 +34,9 @@ function changeImg() {
     setTimeout(changeImg, time)
 }
 window.onload = changeImg;
+
+
+
+document.querySelector('.menu-hamburguer').addEventListener('click', function() {
+    document.querySelector('.lista-menu').classList.toggle('ativo');
+});
