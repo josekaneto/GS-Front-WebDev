@@ -125,14 +125,26 @@ ul {
         text-wrap: balance;
     }
 
-        & .baixar-app {
-            background-color: var(--cor-principal);
+    & .conteudo-section-1-btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        & .saiba-mais {
+            background-color: var(--cor-secundaria);
             transition: .6s;
         }
-        & .baixar-app:hover {
+
+        & .saiba-mais:hover {
             background-color: var(--cor-terciaria);
         }
+
+        & .baixar-app {
+            background-color: var(--cor-principal);
+        }
     }
+}
 
 
 .section-2 {
