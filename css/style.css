@@ -1,5 +1,5 @@
 :root {
-    --cor-principal: rgb(0, 116, 217);
+    --cor-principal: #0074d9;
     --cor-secundaria: rgb(0, 121, 67);
     --cor-terciaria: #b09900;
     --cor-quarternaria: #212529;
@@ -510,7 +510,7 @@ ul {
         height: 60vh;
         object-fit: fill;
         border-radius: .8rem;
-        box-shadow: 0 0 15px var(--cor-principal);
+        box-shadow: 0 0 5px var(--cor-principal);
     }
 
 
@@ -542,6 +542,104 @@ ul {
         }
     }
 }
+
+.section-7 {
+    background-image: url(../images/fundo-2.png);
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    & .conteudo-section-7 {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 4rem 0;
+
+        & h2 {
+            font-size: var(--size-h2);
+            color: var(--cor-texto-preto);
+            font-weight: bold;
+        }
+
+        & p {
+            width: 100%;
+            font-size: var(--size-p);
+            color: var(--cor-texto-preto);
+            line-height: var(--espaco-texto);
+            text-wrap: balance;
+        }
+    }
+
+    & form{
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        & label {
+            font-size: var(--size-p);
+            color: var(--cor-texto-preto);
+        }
+
+        & input {
+            width: 100%;
+            height: 4rem;
+            padding: 0 1rem;
+            border-radius: .8rem;
+            border: 1px solid var(--cor-principal);
+        }
+
+        & .form-inputs {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+
+            & .form-conteudo{
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        & .form-message {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            & textarea {
+                width: 100%;
+                height: 10rem;
+                padding: 1rem;
+                border-radius: .8rem;
+                border: 1px solid var(--cor-principal);
+                resize: none;
+            }
+        }
+
+        & .form-enviar{
+            width: 90%;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--cor-principal);
+            color: var(--cor-texto-branco);
+            border-radius: .8rem;
+            border: none;
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+
 
 @media (max-width: 900px) {
     :root {
@@ -821,7 +919,60 @@ ul {
         }
     }
 
+    .section-7 {
+        flex-direction: column;
+        gap: 3rem;
 
+
+        & .conteudo-section-7 {
+            width: 90%;
+            align-items: center;
+            gap: 2rem 0;
+
+            & h2 {
+                font-size: var(--size-h2);
+                text-align: center;
+            }
+
+            & p {
+                width: 90%;
+                font-size: var(--size-p);
+                text-align: center;
+            }
+        }
+
+        & form {
+            width: 90%;
+            gap: 1.5rem;
+
+            & label {
+                font-size: var(--size-p);
+            }
+
+            & input,
+            & textarea {
+                font-size: var(--size-p);
+            }
+
+            & .form-inputs {
+                flex-direction: column;
+                gap: 1rem;
+
+                & .form-conteudo {
+                    width: 100%;
+                }
+            }
+
+            & .form-message {
+                width: 90%;
+            }
+
+            & .form-enviar {
+                width: 90%;
+                font-size: var(--size-p);
+            }
+        }
+    }
 }
 
 .menu-hamburguer {
