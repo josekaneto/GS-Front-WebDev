@@ -1,0 +1,99 @@
+:root {
+    --cor-principal: #0074d9;
+    --cor-secundaria: #007943;
+    --cor-terciaria: #b09900;
+    --cor-quarternaria: #212529;
+    --cor-texto-branco: #ffffff;
+    --cor-texto-preto: #000000;
+    --font-texto: "Mulish", sans-serif;
+    --font-titulo: "Tinos", serif;
+    --padding-principal: 0 100px;
+    --size-h2: 6rem;
+    --size-h3: 4rem;
+    --size-p: 2rem;
+    --espaco-texto: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    scroll-behavior: smooth;
+
+    & body {
+        font-size: 1.6rem;
+        font-family: var(--font-texto);
+    }
+}
+
+.quiz {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-principal);
+
+    & h2 {
+        font-family: var(--font-titulo);
+        font-size: var(--size-h2);
+        color: var(--cor-texto-preto);
+        margin-bottom: var(--espaco-texto);
+    }
+
+    & .container-quiz {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px var(--cor-principal);
+        border-radius: 1rem;
+
+        &.content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+        }
+
+        & .spnQtd {
+            text-align: end;
+        }
+
+        & .answers {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        & button {
+            width: 100%;
+            text-align: start;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #008CCC;
+            color: white;
+        }
+
+        & .finish {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        & .finish button {
+            text-align: center;
+        }
+    }
+}
+
