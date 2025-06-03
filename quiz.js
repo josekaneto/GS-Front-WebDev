@@ -78,6 +78,86 @@ let questoes = [{
             },
         ],
     },
+    {
+        question: "O que fazer primeiro ao perceber que sua casa será alagada?",
+        answers: [{
+                option: "Poluição do ar",
+                correct: false
+            },
+            {
+                option: " Desligar energia e procurar abrigo seguro",
+                correct: true
+            },
+            {
+                option: "Falta de drenagem urbana",
+                correct: false
+            },
+        ],
+    },
+    {
+        question: "Qual item NÃO deve ser descartado nas ruas, pois contribui para enchentes?",
+        answers: [{
+                option: "Garrafas plásticas",
+                correct: false
+            },
+            {
+                option: "Panfletos e papéis",
+                correct: false
+            },
+            {
+                option: "Todos os anteriores",
+                correct: true
+            },
+        ],
+    },
+    {
+        question: "O que fazer ao se deparar com uma rua alagada dirigindo",
+        answers: [{
+                option: "Acelerar para atravessar rápido",
+                correct: false
+            },
+            {
+                option: "Esperar a água baixar ou buscar rota alternativa",
+                correct: true
+            },
+            {
+                option: "FEstacionar no meio da via",
+                correct: false
+            },
+        ],
+    },
+    {
+        question: "É seguro caminhar em água de enchente se ela for rasa?",
+        answers: [{
+                option: "Não, pois pode haver buracos e contaminação",
+                correct: true
+            },
+            {
+                option: "Sim, se não houver correnteza",
+                correct: false
+            },
+            {
+                option: "Sim, desde que não corra",
+                correct: false
+            },
+        ],
+    },
+    {
+        question: "Qual tecnologia pode ajudar na prevenção de enchentes urbanas?",
+        answers: [{
+                option: "Câmeras de segurança",
+                correct: false
+            },
+            {
+                option: "GPS comum",
+                correct: false
+            },
+            {
+                option: "Aplicativos com dados climáticos e geolocalização em tempo real",
+                correct: true
+            },
+        ],
+    },
 ];
 
 const question = document.querySelector(".question");
@@ -117,7 +197,7 @@ function nextQuestion(e) {
 
 function finish() {
     let motivacional = "";
-    if (questionsCorrect <= 2) {
+    if (questionsCorrect <= 5) {
         motivacional = `<span>
             Você pode melhorar! Pratique mais bons hábitos para prevenir enchentes e proteger nossa comunidade!
         </span>`;

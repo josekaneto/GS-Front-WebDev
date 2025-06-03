@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
-<body>
+<body class="body">
   <section class="container section-1" id="1">
     <header class="header">
       <h1>
@@ -29,12 +29,34 @@
           <li><a href="#4">Público-alvo</a></li>
           <li><a href="#5">Benefícios</a></li>
           <li><a href="#6">Dia a dia</a></li>
+          <li class="menu-botoes-mobile">
+            <button id="switch-light">
+              <img id="icon-sun" src="./images/icon-sun.png" alt="Ícone de sol">
+            </button>
+            <button id="switch-dark">
+              <img id="icon-moon" src="./images/icon-moon.png" alt="Ícone de lua">
+            </button>
+            <button id="switch-orange">
+              <img src="./images/icon-paint.png" alt="Ícone de pincel">
+            </button>
+          </li>
         </ul>
       </nav>
       <div class="menu-hamburguer">
         <span></span>
         <span></span>
         <span></span>
+      </div>
+      <div class="header-botoes">
+        <button id="switch-light">
+          <img id="icon-sun" src="./images/icon-sun.png" alt="Ícone de sol">
+        </button>
+        <button id="switch-dark">
+          <img id="icon-moon" src="./images/icon-moon.png" alt="Ícone de lua">
+        </button>
+        <button id="switch-orange">
+          <img src="./images/icon-paint.png" alt="Ícone de pincel">
+        </button>
       </div>
     </header>
     <div class="conteudo-section-1">
@@ -247,7 +269,7 @@
   <footer class="footer">
     <div class="footer-conteudo">
       <div class="footer-logo-texto">
-        <img src="./images/logo-branco.png" alt="Logo Zaster em branco" />
+        <img id="logo-zaster-branco" src="./images/logo-branco.png" alt="Logo Zaster em branco" />
         <p>Segurança em cada passo, mesmo sob a água.</p>
       </div>
       <ul class="footer-links">

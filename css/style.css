@@ -5,6 +5,7 @@
     --cor-quarternaria: #212529;
     --cor-texto-branco: #ffffff;
     --cor-texto-preto: #000000;
+    --bg-branco: #ffffff;
     --font-texto: "Mulish", sans-serif;
     --font-titulo: "Tinos", serif;
     --padding-principal: 0 100px;
@@ -12,6 +13,37 @@
     --size-h3: 4rem;
     --size-p: 2rem;
     --espaco-texto: 3rem;
+
+}
+
+.darkmode:root {
+    --cor-quarternaria: #ffffff;
+    --cor-texto-branco: #000000;
+    --cor-texto-preto: #ffffff;
+    --bg-branco: #000000;
+}
+
+.darkmode{
+    background-image: none;
+}
+
+.darkmode .section-4 {
+    background-image: url(../images/fundo-preto.png) !important;
+}
+
+.darkmode .section-7 {
+    background-image: url(../images/fundo-preto2.png) !important;
+    background-size: cover;
+}
+
+
+.orangemode:root {
+    --cor-principal: #FFA500;
+    --cor-secundaria: #FFD700;
+    --cor-terciaria: #7a4c00;
+    --cor-quarternaria: #8d704e;
+    --cor-texto-branco: #381900;
+    --cor-texto-preto: #7a4c00;
 }
 
 * {
@@ -28,6 +60,7 @@ html {
     & body {
         font-size: 1.6rem;
         font-family: var(--font-texto);
+        background-color: var(--bg-branco);
     }
 }
 
@@ -43,6 +76,7 @@ h6 {
 ul {
     list-style: none;
 }
+
 
 .botao {
     text-decoration: none;
@@ -92,13 +126,39 @@ ul {
             font-weight: bold;
             text-decoration: none;
             color: var(--cor-texto-preto);
-            transition: .5s;
+            transition: .6s;
         }
 
         a:hover {
             color: var(--cor-terciaria);
         }
     }
+
+    & .menu-botoes-mobile {
+        display: none;
+    }
+
+    & .header-botoes {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        & button {
+            cursor: pointer;
+            background: none;
+            border: none;
+
+            & img {
+                width: 50%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.menu-hamburguer {
+    display: none;
 }
 
 .conteudo-section-1 {
@@ -397,6 +457,7 @@ ul {
             font-size: var(--size-p);
             text-align: left;
             line-height: var(--espaco-texto);
+            color: var(--cor-texto-preto);
         }
 
         & li::marker {
@@ -491,20 +552,17 @@ ul {
 
     & .card-beneficio-1 {
         background-color: var(--cor-secundaria);
-        opacity: 0.7;
-        box-shadow: 0 0 30px var(--cor-secundaria);
+        box-shadow: 0 0 10px var(--cor-secundaria);
     }
 
     & .card-beneficio-2 {
         background-color: var(--cor-principal);
-        opacity: 0.7;
-        box-shadow: 0 0 30px var(--cor-principal);
+        box-shadow: 0 0 10px var(--cor-principal);
     }
 
     & .card-beneficio-3 {
         background-color: var(--cor-terciaria);
-        opacity: 0.7;
-        box-shadow: 0 0 30px var(--cor-terciaria);
+        box-shadow: 0 0 10px var(--cor-terciaria);
     }
 }
 
@@ -599,6 +657,7 @@ ul {
         }
 
         & input {
+            color: var(--cor-texto-preto);
             width: 100%;
             height: 4rem;
             padding: 0 1rem;
@@ -718,6 +777,19 @@ footer {
         --espaco-texto: 2rem;
     }
 
+    .darkmode .header .lista-menu {
+        background: var(--cor-texto-branco) !important;
+    }
+
+    .darkmode .header .lista-menu a {
+        color: var(--cor-texto-preto) !important;
+    }
+
+    .orangemode .section-1 p{
+        background-color: var(--cor-texto-branco) !important;
+        opacity: 0.9 !important;
+    }
+
     .botao {
         padding: 1rem 2rem;
     }
@@ -734,6 +806,29 @@ footer {
             width: 10rem;
             height: auto;
         }
+    }
+
+    .header-botoes {
+        display: none !important;
+    }
+
+    .menu-botoes-mobile {
+        display: flex !important;       
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .menu-botoes-mobile button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .menu-botoes-mobile img {
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     .header .lista-menu {
@@ -777,6 +872,9 @@ footer {
         transition: 0.3s;
     }
 
+
+
+
     .section-1 {
         background-image: url(../images/enchente.jpg);
         background-size: cover;
@@ -792,10 +890,11 @@ footer {
 
         & p{
             width: 90%;
+            padding: 1rem 0;
             font-size: var(--size-p);
             line-height: var(--espaco-texto);
             text-align: center;
-            background-color: #fff;
+            background-color: var(--cor-texto-branco);
             opacity: 0.6;
             border-radius: 1rem;
         }
@@ -1088,10 +1187,6 @@ footer {
         }
     }
     
-}
-
-.menu-hamburguer {
-    display: none;
 }
 @media (max-width: 900px) {
     .menu-hamburguer {

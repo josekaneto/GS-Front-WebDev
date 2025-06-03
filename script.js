@@ -41,4 +41,42 @@ document.querySelector('.menu-hamburguer').addEventListener('click', function ()
     document.querySelector('.lista-menu').classList.toggle('ativo');
 });
 
+const html = document.querySelector('html');
+const btnsDarkMode = document.querySelectorAll('#switch-dark');
+const btnsLightMode = document.querySelectorAll('#switch-light');
+const btnsOrangeMode = document.querySelectorAll('#switch-orange');
+
+// Troca para branco no darkmode
+btnsDarkMode.forEach(btn => {
+    btn.addEventListener('click', () => {
+        html.classList.add('darkmode');
+        html.classList.remove('orangemode');
+        document.querySelectorAll('#icon-sun').forEach(img => img.src = './images/icon-sun-light.png');
+        document.querySelectorAll('#icon-moon').forEach(img => img.src = './images/icon-moon-light.png');
+        document.querySelectorAll('#logo-zaster-branco').forEach(img => img.src = './images/logo.png');
+        document.querySelectorAll('.logo-zaster').forEach(img => img.src = './images/logo-branco.png');
+    });
+});
+
+// Troca para preto no lightmode
+btnsLightMode.forEach(btn => {
+    btn.addEventListener('click', () => {
+        html.classList.remove('darkmode');
+        html.classList.remove('orangemode');
+        document.querySelectorAll('#icon-sun').forEach(img => img.src = './images/icon-sun.png');
+        document.querySelectorAll('#icon-moon').forEach(img => img.src = './images/icon-moon.png');
+        document.querySelectorAll('#logo-zaster-branco').forEach(img => img.src = './images/logo-branco.png');
+        document.querySelectorAll('.logo-zaster').forEach(img => img.src = './images/logo.png');
+    });
+});
+btnsOrangeMode.forEach(btn => {
+    btn.addEventListener('click', () => {
+        html.classList.remove('darkmode');
+        html.classList.add('orangemode');
+        document.querySelectorAll('#icon-sun').forEach(img => img.src = './images/icon-sun-brown.png');
+        document.querySelectorAll('#icon-moon').forEach(img => img.src = './images/icon-moon-brown.png');
+        document.querySelectorAll('#logo-zaster-branco').forEach(img => img.src = './images/logo-brown.png');
+        document.querySelectorAll('.logo-zaster').forEach(img => img.src = './images/logo-brown.png');
+    });
+});
 

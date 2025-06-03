@@ -108,3 +108,66 @@ button{
     width: 50%;
     text-align: center;
 }
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+    .quiz {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+        flex-direction: column;
+        box-shadow: 0 0 8px var(--cor-principal);
+    }
+
+    .content {
+        gap: 2rem;
+    }
+
+    .spnQtd,
+    .question {
+        font-size: 2rem;
+    }
+
+    .answers button,
+    button {
+        font-size: 1.8rem;
+        padding: 8px;
+    }
+
+    .finish {
+        font-size: 2rem;
+        gap: 1.2rem;
+    }
+
+    .finish button {
+        width: 80%;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .quiz {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .spnQtd,
+    .question {
+        font-size: 1.4rem;
+    }
+
+    .answers button,
+    button {
+        font-size: 1.2rem;
+        padding: 6px;
+    }
+
+    .finish {
+        font-size: 1.2rem;
+    }
+
+    .finish button {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}
