@@ -80,3 +80,17 @@ btnsOrangeMode.forEach(btn => {
     });
 });
 
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function (e) {
+        const emailInput = this.querySelector('input[type="email"]');
+        if (!emailInput.value.trim()) {
+            e.preventDefault();
+            alert('O campo de e-mail é obrigatório.');
+            emailInput.focus();
+            return;
+        }
+        e.preventDefault();
+        this.reset();
+        alert('Mensagem enviada!');
+    });
+});

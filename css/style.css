@@ -663,6 +663,7 @@ ul {
             padding: 0 1rem;
             border-radius: .8rem;
             border: 1px solid var(--cor-principal);
+            background-color: var(--cor-texto-branco);
         }
 
         & .form-inputs {
@@ -691,6 +692,8 @@ ul {
                 border-radius: .8rem;
                 border: 1px solid var(--cor-principal);
                 resize: none;
+                background-color: var(--cor-texto-branco);
+                color: var(--cor-texto-preto);
             }
         }
 
