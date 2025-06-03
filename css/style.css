@@ -909,6 +909,14 @@ footer {
         width: 100% ;
         gap: 4rem ;
         align-items: center ;
+
+        & p {
+            width: 80% ;
+            font-size: var(--size-p);
+            line-height: var(--espaco-texto);
+            text-align: center;
+            color: var(--cor-texto-preto);
+        }   
     
 
         & .cards {
@@ -924,6 +932,13 @@ footer {
                     height: 15rem ;
                 }
 
+                & p{
+                    width: 100% ;
+                    font-size: var(--size-p);
+                    text-align: center;
+                    line-height: var(--espaco-texto);
+                }
+
                 & a{
                     width: 100% ;
                     text-align: center ;
@@ -936,7 +951,7 @@ footer {
         justify-content: center;
         flex-direction: column;
         width: 100% ;
-        gap: 2rem ;
+        gap: 5rem ;
         align-items: center ;
         height: auto ;
         padding: 5rem 0;
@@ -960,6 +975,7 @@ footer {
                 width: 80%;
                 font-size: var(--size-p);
                 line-height: var(--espaco-texto);
+                text-align: center;
             }
         }
 
@@ -1018,27 +1034,47 @@ footer {
         }
     }
 
+
+    .section-4 {
+        height: auto;
+        padding: 3rem 0;
+        background-size: cover;
+    }
+
     .conteudo-section-4 {
         flex-direction: column;
-        width: 100% ;
-        gap: 3rem ;
-        align-items: center ;
-        justify-content: center;
+        width: 100%;
+        height: 100%;
+        gap: 5rem;
+        align-items: center;
+        justify-content: space-evenly;
 
         & ul {
-            list-style: decimal;
-            width: 60%;
-            flex-direction: column;
-            align-items: center;
+            width: 80%;
+            padding: 1rem;
+            gap: 1.5rem;
+            font-size: var(--size-p);
         }
     }
 
     .texto-section-4 {
-        flex-direction: column;
-        width: 100% ;
-        gap: 2rem ;
-        align-items: center ;
+        width: 90%;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+
+        & h2 {
+            font-size: var(--size-h2);
+            text-align: center;
+        }
+
+        & p {
+            width: 100%;
+            font-size: var(--size-p);
+            text-align: center;
+        }
     }
+
 
     .section-5 {
         gap: 5rem ;
@@ -1063,7 +1099,8 @@ footer {
 
     .section-6 {
         flex-direction: column-reverse;
-        gap: 2rem;
+        justify-content: center;
+        gap: 5rem;
         padding: 3rem 0;
 
         & img {
@@ -1084,6 +1121,8 @@ footer {
             & .p-section-6 {
                 font-size: var(--size-p);
                 gap: 1rem;
+                text-align: center;
+                text-wrap: balance;
             }
         }
     }
